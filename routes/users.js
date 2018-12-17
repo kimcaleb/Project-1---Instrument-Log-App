@@ -25,6 +25,12 @@ userRouter.post("/signup", passport.authenticate("local-signup", {
     failureRedirect: "/signup"
   }));
 
+userRouter.post("/login", passport.authenticate("local-login", {
+    successRedirect: "/profile", 
+    failureRedirect: "/login"
+  }));
+  
+
   
   userRouter.get("/profile",isLoggedIn,(req,res) => {
     res.render("profile");
