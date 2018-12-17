@@ -36,3 +36,18 @@ passport.use("local-signup", new LocalStrategy({
         });
     })
 );
+
+// LOCAL LOGIN ACTION
+passport.use("local-login", new LocalStrategy({
+        usernameField: "email",
+        passwordField: "password",
+        passReqToCallback: true
+    }, (req,email,password,done) =>{
+        User.findOne({email},(err,user) => {
+            if (err) return done(err);
+            if (!user || !user.isValidPassword(password)) return done(null,false);
+            return done(null,user);
+        });
+    })
+);
+module.exports = passport;
