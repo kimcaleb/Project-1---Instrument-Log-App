@@ -2,8 +2,8 @@ const
     mongoose = require("mongoose"),
     bcrypt = require("bcrypt-nodejs"),
     userSchema = new mongoose.Schema({
-        email = String,
-        password = String
+        email:String,
+        password:String
     }, {timestamps:true});
 
   //The pre method is invoked before every single save that is done for particular user object. So, if we're editing a user and saving the changes, this will always be invoked. This method is going to handle the actual encryption of the password. The "next" argument is a callback function basically saying move on to the next step, which is the actual saving of the object. So, user provides password in plain text, then we encrpt the password and store it before moving on to the next step.
