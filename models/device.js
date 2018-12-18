@@ -36,8 +36,12 @@ const
         cal175doe: String,
         cal100ln: String,
         cal100doe: String
-    },{timestamps:true});
+    },{timestamps:true}),
     deviceSchema = new mongoose.Schema({
         name: String,
         logs: [logSchema]
     },{timestamps:true});
+
+
+const Device = mongoose.model("Device",deviceSchema);
+module.exports = Device;
