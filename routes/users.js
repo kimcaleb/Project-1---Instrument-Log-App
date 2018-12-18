@@ -35,6 +35,9 @@ userRouter.get("/logout", (req,res) =>{
     res.render("profile");
   });
 
+  //User Update
+  
+
   function isLoggedIn(req,res,next) {
     if(req.isAuthenticated()) return next();
     res.redirect("/login");
