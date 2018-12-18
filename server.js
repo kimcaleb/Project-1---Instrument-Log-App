@@ -11,7 +11,8 @@
     passport = require("./services/auth")
     userRouter = require("./routes/users"),
     cookieParser = require("cookie-parser"),
-    methodOverride = require("method-override");
+    methodOverride = require("method-override"),
+    flash = require("connect-flash");
 
 
 // Database
@@ -28,6 +29,7 @@ app.use(cookieParser()); // interpret cookies that are attached to requests
 app.use(express.urlencoded({extended: true})); // interpret standard form data in requests
 app.use(express.static(__dirname + "/public")); //allows us to attach static css files to ejs files
 app.use(methodOverride("_method")); // will look for query command
+app.use(flash());
 
 // App Configuration
 app.set("view engine", "ejs"); // Tells app we are not using standard html but ejs

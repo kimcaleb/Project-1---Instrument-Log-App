@@ -5,7 +5,7 @@ const
 
 // render login view
 userRouter.get("/login", (req,res) =>{
-    res.render("index");
+    res.render("index", { message: req.flash("signupMessage")});
 });
 
 
@@ -17,7 +17,7 @@ userRouter.post("/login", passport.authenticate("local-login",{
 
 // render signup view
 userRouter.get('/signup', (req, res) => {
-    res.render('signup');
+    res.render("signup", { message: req.flash("signupMessage")});
   });
   
 userRouter.post("/signup", passport.authenticate("local-signup", {
