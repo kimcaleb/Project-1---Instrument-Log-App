@@ -5,7 +5,7 @@ const
 
 // render login view
 userRouter.get("/login", (req,res) =>{
-    res.render("index", { message: req.flash("signupMessage")});
+    res.render("index", {message: req.flash("signupMessage")});
 });
 
 

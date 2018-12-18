@@ -59,6 +59,7 @@ app.get("/", (req,res) =>{
     res.render("index");
 });
 app.use("/",userRouter);
+// app.use('/devices', isLoggedIn ,devicesRouter)
 
 
 // Listening on
