@@ -39,6 +39,18 @@ userRouter.get("/logout", (req,res) =>{
   userRouter.get("/profile/edit",isLoggedIn, (req,res) =>{
     res.render("editprofile");
   });
+
+  userRouter.patch("/profile", isLoggedIn, (req,res) => {
+    //check to see if the request body has a truthy password key (meaning the user is tryingg to modify password). Essentially, if there is nothing written in the password field, then we want to delete the password field in the req.body object since we don't want a empty password to be saved over the current password. 
+    if (!req.body.password) delete req.body.password;
+    // The assign method will take an object as the first argument and take another object that we want to merge it with. req.user now holds the new information
+    Object.assign(req.user,req.body);
+    req.user.save((err,updatedUser) =>{
+      if (err) return console.log(err);
+      res.redirect("/profile");
+    });
+  });
+  
   
 
   function isLoggedIn(req,res,next) {
