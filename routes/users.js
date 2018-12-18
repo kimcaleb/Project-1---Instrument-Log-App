@@ -23,15 +23,14 @@ userRouter.get('/signup', (req, res) => {
 userRouter.post("/signup", passport.authenticate("local-signup", {
     successRedirect: "/profile",
     failureRedirect: "/signup"
-  }));
+  })); 
 
-userRouter.post("/login", passport.authenticate("local-login", {
-    successRedirect: "/profile", 
-    failureRedirect: "/login"
-  }));
-  
+//destroy the session and redirect the user back to the homepage. 
+userRouter.get("/logout", (req,res) =>{
+    req.logout();
+    res.redirect("/login");
+  });
 
-  
   userRouter.get("/profile",isLoggedIn,(req,res) => {
     res.render("profile");
   });

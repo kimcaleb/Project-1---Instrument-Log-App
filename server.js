@@ -51,8 +51,6 @@ app.get("/", (req,res) =>{
 app.use("/",userRouter);
 
 
-
-
 // Listening on
 app.listen(PORT, err => {
     console.log(err || `Listening on Port ${PORT}`);
