@@ -36,6 +36,9 @@ userRouter.get("/logout", (req,res) =>{
   });
 
   //User Update
+  userRouter.get("/profile/edit",isLoggedIn, (req,res) =>{
+    res.render("editprofile");
+  });
   
 
   function isLoggedIn(req,res,next) {

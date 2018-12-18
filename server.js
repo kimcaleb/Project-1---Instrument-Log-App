@@ -10,7 +10,8 @@
     MongoDBStore = require('connect-mongodb-session')(session), //Higher order function
     passport = require("./services/auth")
     userRouter = require("./routes/users"),
-    cookieParser = require("cookie-parser");
+    cookieParser = require("cookie-parser"),
+    methodOverride = require("method-override");
 
 
 // Database
@@ -26,6 +27,7 @@ app.use(logger("dev")); // log incoming requests to terminal
 app.use(cookieParser()); // interpret cookies that are attached to requests
 app.use(express.urlencoded({extended: true})); // interpret standard form data in requests
 app.use(express.static(__dirname + "/public")); //allows us to attach static css files to ejs files
+app.use(methodOverride("_method")); // will look for query command
 
 // App Configuration
 app.set("view engine", "ejs"); // Tells app we are not using standard html but ejs
@@ -42,6 +44,12 @@ app.use(session({
 app.use(passport.initialize()); 
 app.use(passport.session());
 
+//locals is a property that is available on every view that we render using ejs. It can have access to this locals object if we so define it, which means that we can assign key value pairs on that local object that are globally available in every single view which basically enables us to make our code dryer. 
+app.use((req,res,next) => {
+	app.locals.currentUser = req.user;
+	app.locals.loggedIn = req.user;
+	next();
+});
 
 
 // Routes
