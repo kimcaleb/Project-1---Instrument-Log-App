@@ -50,6 +50,14 @@ userRouter.get("/logout", (req,res) =>{
       res.redirect("/profile");
     });
   });
+
+  //User Delete
+  userRouter.delete("/profile", isLoggedIn, (req,res) =>{
+    req.user.delete((err,deletedUser) =>{
+      if (err) return console.log(err);
+      res.redirect("/login");
+    });
+  });
   
   
 
