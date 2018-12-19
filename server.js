@@ -30,6 +30,7 @@ app.use(express.urlencoded({extended: true})); // interpret standard form data i
 app.use(express.static(__dirname + "/public")); //allows us to attach static css files to ejs files
 app.use(methodOverride("_method")); // will look for query command
 app.use(flash());
+app.use(express.json());
 
 // App Configuration
 app.set("view engine", "ejs"); // Tells app we are not using standard html but ejs
@@ -61,9 +62,7 @@ app.get("/", (req,res) =>{
 app.use("/",userRouter);
 
 const devicesRouter = require("./routes/devices");
-app.use('/devices', isLoggedIn ,devicesRouter)
-
-
+app.use("/devices" ,devicesRouter); // make sure use is logged in before device is accessed.
 
 function isLoggedIn(req,res,next) {
     if(req.isAuthenticated()) return next();
