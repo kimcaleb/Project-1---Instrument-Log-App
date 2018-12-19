@@ -59,8 +59,16 @@ app.get("/", (req,res) =>{
     res.render("index");
 });
 app.use("/",userRouter);
-// app.use('/devices', isLoggedIn ,devicesRouter)
 
+const devicesRouter = require("./routes/devices");
+app.use('/devices', isLoggedIn ,devicesRouter)
+
+
+
+function isLoggedIn(req,res,next) {
+    if(req.isAuthenticated()) return next();
+    res.redirect("/login");
+  }
 
 // Listening on
 app.listen(PORT, err => {
