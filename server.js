@@ -63,7 +63,7 @@ app.get("/", (req,res) =>{
 app.use("/",userRouter);
 
 const devicesRouter = require("./routes/devices");
-app.use("/devices",isLoggedIn, devicesRouter); // make sure use is logged in before device is accessed.
+app.use("/devices", isLoggedIn, devicesRouter); // make sure use is logged in before device is accessed.
 
 function isLoggedIn(req,res,next) {
     if(req.isAuthenticated()) return next();
