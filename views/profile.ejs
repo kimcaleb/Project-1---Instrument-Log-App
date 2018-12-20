@@ -1,11 +1,23 @@
-<div>
-  <a href="/logout" class="btn btn-warning btn-sm">Logout</a>
-  <a href="/profile/edit" class="btn btn-warning btn-sm">Delete/Edit Profile</a>
-</div>
-<br/>
-
 <div class="container-fluid">
-  <table class="table">
+
+    <a href="/logout" class="btn btn-warning btn-sm">Logout</a>
+    <a href="/profile/edit" class="btn btn-warning btn-sm">Delete/Edit Profile</a>
+
+    <br/>
+    <div class="dropdown">
+        <button class="btn btn-info btn-md dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Instrument
+        </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">EP4C</a>
+            <a class="dropdown-item" href="#">PP7</a>
+            <a class="dropdown-item" href="#">PP9</a>
+          </div>
+        </div>
+</div>
+
+<div class="tableDiv">
+<table class="table">
     <thead class="thead-light">
       <tr>
         <th scope="col">Date</th>
@@ -44,10 +56,12 @@
         <th scope="col">Cal 17.5 D0E</th>
         <th scope="col">Cal 100 L/N</th>
         <th scope="col">Cal 100 D0E</th>
+        <th scope="col">Reason for Edit</th>
       </tr>
     </thead>
     <tbody>
       <tr>
+          <td><input type="text"></td>
           <td><input type="text"></td>
           <td><input type="text"></td>
           <td><input type="text"></td>

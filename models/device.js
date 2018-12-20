@@ -35,7 +35,8 @@ const
         cal175ln: String,
         cal175doe: String,
         cal100ln: String,
-        cal100doe: String
+        cal100doe: String,
+        reason: String,
     },{timestamps:true}),
     deviceSchema = new mongoose.Schema({
         name: String,
