@@ -31,14 +31,15 @@
 <br />
 <br />
 <div class="dropdown">
-    <button class="btn btn-info btn-md dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-info btn-md dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Instrument
-    </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Test</a>
-        <a class="dropdown-item" href="#">PP7</a>
-        <a class="dropdown-item" href="#">PP9</a>
-      </div>
+  </button>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Test</a>
+    <a class="dropdown-item" href="#">PP7</a>
+    <a class="dropdown-item" href="#">PP9</a>
+  </div>
 </div>
 
   <% newDevice = {} %>
@@ -46,7 +47,7 @@
     <h1 class="header"> <%= newDevice.name %> Assay Log </h1>
   <% } %>
   <% if (isEmpty(newDevice)) { %>
-      <h1 class="header"> Assay Log</h1> 
+      <h1 class="header"> Instrument Assay Log</h1> 
    <% } %> 
 
 <div class="tableDiv">

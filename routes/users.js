@@ -1,7 +1,8 @@
 const
     express = require("express"),
     userRouter = new express.Router(),
-    passport = require("../services/auth");
+    passport = require("../services/auth"),
+    devices = require("../controllers/devices"); 
 
 // render login view
 userRouter.get("/login", (req,res) =>{
@@ -32,6 +33,7 @@ userRouter.get("/logout", (req,res) =>{
   });
 
   userRouter.get("/profile",isLoggedIn,(req,res) => {
+    res.send(devices.index());
     res.render("profile");
   });
 
