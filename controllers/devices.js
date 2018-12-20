@@ -3,11 +3,11 @@ const
 
 module.exports = {
     index: (req,res) => {
-        Device.find({}, (err,devices) =>{
+        Device.find({}, (err,devices) => {
+            console.log(devices);
             if (err) console.log(err);
-            else {
-               return devices;
-            }
+            res.render("profile",{devices});
+            
         });
     },
     show: (req,res) => {

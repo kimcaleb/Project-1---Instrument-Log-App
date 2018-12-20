@@ -12,6 +12,7 @@
     userRouter = require("./routes/users"),
     cookieParser = require("cookie-parser"),
     methodOverride = require("method-override"),
+    devices = require("./controllers/devices")
     flash = require("connect-flash");
 
 
