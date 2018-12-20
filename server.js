@@ -50,7 +50,8 @@ app.use(passport.session());
 //locals is a property that is available on every view that we render using ejs. It can have access to this locals object if we so define it, which means that we can assign key value pairs on that local object that are globally available in every single view which basically enables us to make our code dryer. 
 app.use((req,res,next) => {
 	app.locals.currentUser = req.user;
-	app.locals.loggedIn = req.user;
+    app.locals.loggedIn = req.user;
+    app.locals.newDevice = req.newDevice;
 	next();
 });
 
@@ -62,7 +63,7 @@ app.get("/", (req,res) =>{
 app.use("/",userRouter);
 
 const devicesRouter = require("./routes/devices");
-app.use("/devices" ,devicesRouter); // make sure use is logged in before device is accessed.
+app.use("/devices",isLoggedIn, devicesRouter); // make sure use is logged in before device is accessed.
 
 function isLoggedIn(req,res,next) {
     if(req.isAuthenticated()) return next();
