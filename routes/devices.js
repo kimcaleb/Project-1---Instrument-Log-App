@@ -12,6 +12,6 @@ deviceRouter.post("/", Device.create); // create new device
 
 // Log Endpoints
 deviceRouter.get("/:id", Log.index); // Show a specific device + logs. 
-// deviceRouter.post("/:id", Log.create); // Create new log
+deviceRouter.post("/:id", Log.create); // Create new log
  
 module.exports = deviceRouter;

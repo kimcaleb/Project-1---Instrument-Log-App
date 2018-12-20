@@ -4,17 +4,17 @@ const
 module.exports = {
     index: (req,res) => {
         Device.find({}, (err,devices) =>{
-            if (err) res.json({sucess:false,err});
+            if (err) console.log(err);
             else {
-                res.json({success:true, devices});
+                res.render("profile", {devices});
             }
         });
     },
     create: (req,res) =>{
         Device.create(req.body, (err,newDevice) =>{
-            if (err) res.json({success:false, err});
+            if (err) console.log(err);
             else {
-                res.json({success:true,newDevice});
+                res.render("profile", {newDevice});
             }
         });
     }
