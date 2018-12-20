@@ -41,6 +41,13 @@
       </div>
 </div>
 
+  <% newDevice = {} %>
+  <% if (!isEmpty(newDevice)) { %>
+    <h1 class="header"> <%= newDevice.name %> Assay Log </h1>
+  <% } %>
+  <% if (isEmpty(newDevice)) { %>
+      <h1 class="header"> Assay Log</h1> 
+   <% } %> 
 
 <div class="tableDiv">
   <table class="table">

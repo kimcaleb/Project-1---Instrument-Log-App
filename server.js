@@ -52,6 +52,13 @@ app.use((req,res,next) => {
 	app.locals.currentUser = req.user;
     app.locals.loggedIn = req.user;
     app.locals.newDevice = req.newDevice;
+    app.locals.isEmpty = function(obj) {
+        for(var key in obj) {
+            if(obj.hasOwnProperty(key))
+                return false;
+        }
+        return true;
+    }
 	next();
 });
 
