@@ -33,8 +33,8 @@ userRouter.get("/logout", (req,res) =>{
   });
 
   userRouter.get("/profile",isLoggedIn,(req,res) => {
-    res.send(devices.index());
-    res.render("profile");
+    // send devices whenever we are logged into profile. 
+    res.render("profile",{devices:devices.index()});
   });
 
   //User Update

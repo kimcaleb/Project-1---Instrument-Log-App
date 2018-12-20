@@ -10,6 +10,14 @@ module.exports = {
             }
         });
     },
+    show: (req,res) => {
+        Device.findById(req.params.id, (err,device)=>{
+            if (err) console.log(err);
+            else {
+                return device;
+            }
+        });
+    },
     create: (req,res) =>{
         Device.create(req.body, (err,newDevice) =>{
             if (err) console.log(err);
