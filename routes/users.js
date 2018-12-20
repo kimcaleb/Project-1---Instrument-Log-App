@@ -32,6 +32,7 @@ userRouter.get("/logout", (req,res) =>{
     res.redirect("/login");
   });
 
+  //we passed in devices.index here so that whenever the profile loads, the devices will be sent to that ejs file
   userRouter.get("/instruments",isLoggedIn,devices.index,(req,res) => {
     // send devices whenever we are logged into profile. 
     res.render("profile");
