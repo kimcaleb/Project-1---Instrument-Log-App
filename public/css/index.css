@@ -1,3 +1,6 @@
+body {
+    margin-top:30px;
+}
 .container {
     margin-top:100px;
     text-align: center;
@@ -12,6 +15,7 @@ h1 {
 
 .signup {
     margin-top:20px;
+    text-align: center;
     
 }
 .submit {
@@ -21,12 +25,12 @@ h1 {
 #submitbutton {
     margin-top:10px;
 }
-.logoutbutton {
-    margin-right:880px;
-}
 
 .tableDiv {
-   
-   margin-left:-190px;
+   margin-left:10%;
+   margin-top: 10%;
+}
 
+.tableDiv > .table > .thead-light > tr > th {
+    text-align: center;
 }
