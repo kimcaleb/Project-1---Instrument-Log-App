@@ -1,5 +1,6 @@
 body {
     margin-top:30px;
+    margin-left:10px;
 }
 .container {
     margin-top:100px;
@@ -33,4 +34,8 @@ h1 {
 
 .tableDiv > .table > .thead-light > tr > th {
     text-align: center;
+}
+.logoutbutton {
+    margin-top:-20px;
+    margin-bottom:30px;
 }

@@ -14,7 +14,7 @@ module.exports = {
         Device.create(req.body, (err,newDevice) =>{
             if (err) console.log(err);
             else {
-                res.json({success:true, newDevice});
+                res.render("profile", {newDevice});
             }
         });
     }
