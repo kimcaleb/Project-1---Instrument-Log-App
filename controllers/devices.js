@@ -6,7 +6,7 @@ module.exports = {
         Device.find({}, (err,devices) =>{
             if (err) console.log(err);
             else {
-                res.render("profile", {devices});
+                res.json({success:true, devices});
             }
         });
     },
@@ -14,7 +14,7 @@ module.exports = {
         Device.create(req.body, (err,newDevice) =>{
             if (err) console.log(err);
             else {
-                res.render("profile", {newDevice});
+                res.json({success:true, newDevice});
             }
         });
     }

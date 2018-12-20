@@ -3,24 +3,23 @@ const
 
 module.exports = {
     index: (req,res) =>{
-        Device.findById(req.params.device_id, (err,device) =>{
+        Device.findById(req.params.id, (err,device) =>{
             if (err) res.json({success:false,err});
             else {
-                res.json({success:true,device: device.logs});
+                res.json({success:true,device});
             }
         });
     },
     create: (req,res) => {
-        Device.findById(req.params.device_id, (err,device) =>{
+        Device.findById(req.params.id, (err,device) =>{
             if (err) res.json({success: false, err});
             else {
-                let newLog = req.body;
-                device.logs.push(newLog);
-                console.log(device.logs[0].createdAt.$date);
+                device.logs.push(req.body);
                 device.save( err =>{
                     if (err) res.json({success:false, err});
                     else {
                         res.json({success:true, device});
+                        console.log(device.logs[0]);
                     }
                 });
             }
