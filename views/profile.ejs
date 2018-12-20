@@ -1,7 +1,7 @@
 
 <div class="logoutbutton">
   <a href="/logout" class="btn btn-warning btn-sm">Logout</a>
-  <a href="/profile/edit" class="btn btn-warning btn-sm">Delete/Edit Profile</a>
+  <a href="/instruments/editprofile" class="btn btn-warning btn-sm">Delete/Edit Profile</a>
 </div>
 <br />
 <br /> 
@@ -37,7 +37,7 @@
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <% for (let i=devices.length-1; i>=0; i--) { %>
-      <a class="dropdown-item" href="/profile"> <%= devices[i].name %></a>
+      <a class="dropdown-item" href="/instruments"> <%= devices[i].name %></a>
       <% } %>
   </div>
 </div>

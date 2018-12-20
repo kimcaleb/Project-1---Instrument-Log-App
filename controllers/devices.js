@@ -4,10 +4,8 @@ const
 module.exports = {
     index: (req,res) => {
         Device.find({}, (err,devices) => {
-            console.log(devices);
             if (err) console.log(err);
-            res.render("profile",{devices});
-            
+            res.render("profile",{devices});         
         });
     },
     show: (req,res) => {
@@ -22,7 +20,7 @@ module.exports = {
         Device.create(req.body, (err,newDevice) =>{
             if (err) console.log(err);
             else {
-                res.render("profile", {newDevice});
+                res.redirect("instruments");
             }
         });
     }
