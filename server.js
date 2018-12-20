@@ -66,7 +66,7 @@ app.use("/devices" ,devicesRouter); // make sure use is logged in before device 
 
 function isLoggedIn(req,res,next) {
     if(req.isAuthenticated()) return next();
-    res.redirect("/login");
+    res.redirect("/login"); 
   }
 
 // Listening on
