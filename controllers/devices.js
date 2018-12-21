@@ -15,7 +15,7 @@ module.exports = {
             console.log(device);
             Device.find({}, (err,devices) => {
                 if (err) console.log(err);
-                res.render("profile", {devices, device});         
+                res.render("profile2", {devices, device});         
             });
         });
     },

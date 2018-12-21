@@ -43,10 +43,10 @@
         </div>
       </div>
             <header><img src="https://i.imgur.com/eYjy3Ov.jpg" alt=""></header>
-            <h1 class="header">Instrument Assay Log</h1> 
+            <h1 class="header"><%= device.name %> Assay Log</h1> 
     
     
-      <form method="post" action="/devices">
+      <form method="post" action="/devices/<%= device.id %>">
         <div class="tableDiv">
           <table class="table">
             <thead class="thead-light">
