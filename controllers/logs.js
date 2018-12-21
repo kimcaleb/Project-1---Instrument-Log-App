@@ -17,9 +17,10 @@ module.exports = {
                 device.logs.push(req.body);
                 device.save( err =>{
                     if (err) console.log(err);
-                    else {
-                        res.render("profile2",{device});
-                    }
+                    Device.find({}, (err,devices) => {
+                        if (err) console.log(err);
+                        res.render("profile2", {devices, device});         
+                    });
                 });
             }
         });
