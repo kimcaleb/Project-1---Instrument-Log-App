@@ -29,15 +29,18 @@ h1 {
 
 .tableDiv {
    
-   margin-top: 5%;
+   margin-top: 3%;
    background-color: rgb(211, 224, 230);
    width:500%;
 }
 
 .tableDiv > .table > .thead-light > tr > th {
-    padding-left:70px;
-  
+
 }
+.inputfield {
+    margin-left: 15px;
+}
+
 .logoutbutton {
     margin-top:-20px;
     margin-bottom:30px;
@@ -75,3 +78,11 @@ th[scope] {
 }
 
 
+/*Splash Page*/
+#profile1 {
+    margin-top: 2%;
+    text-align:center;
+}
+#profile1header {
+    margin-top:10%;
+}

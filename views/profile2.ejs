@@ -1,0 +1,228 @@
+
+  <div class="logoutbutton">
+        <a href="/logout" class="btn btn-warning btn-sm">Logout</a>
+        <a href="/instruments/editprofile" class="btn btn-warning btn-sm">Delete/Edit Profile</a>
+      </div>
+      <br />
+      <br /> 
+      <button class="btn btn-info btn-md " data-toggle="modal" data-target="#myModal" type="button" aria-haspopup="true" aria-expanded="false">
+            Add New Device
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">    
+            <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Adding New Device</h4>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="/devices">    
+                <input class="form-control" type="text" name="name" id="name" placeholder="Name of Device">
+                <input type="submit" name="submit" class="btn btn-info btn-sm" value="Add">
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>    
+        </div>
+      </div>
+      <br />
+      <br />
+    
+      <div class="dropdown">
+        <button class="btn btn-info btn-md dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Instrument
+        </button>
+    
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <% for (let i=devices.length-1; i>=0; i--) { %>
+          <a class="dropdown-item" href="/devices/<%= devices[i].id %>"><%= devices[i].name %></a>
+          <% } %>
+        </div>
+      </div>
+            <header><img src="https://i.imgur.com/eYjy3Ov.jpg" alt=""></header>
+            <h1 class="header">Instrument Assay Log</h1> 
+    
+    
+      <form method="post" action="/devices">
+        <div class="tableDiv">
+          <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Description</th>
+                <th scope="col">Time</th>
+                <th scope="col">Humidity</th>
+                <th scope="col">Initials</th>
+                <th scope="col">Comments</th>
+                <th scope="col">FB L/N</th>
+                <th scope="col">FB D0E</th>
+                <th scope="col">CRD L/N</th>
+                <th scope="col">CRD D0E</th>
+                <th scope="col">tIgE L/N</th>
+                <th scope="col">tIgE D0E</th>
+                <th scope="col">Conjugate L/N</th>
+                <th scope="col">Conjugate D0E</th>
+                <th scope="col">SubA L/N</th>
+                <th scope="col">SubA D0E</th>
+                <th scope="col">SubB L/N</th>
+                <th scope="col">SubB D0E</th>
+                <th scope="col">WB 10x L/N</th>  
+                <th scope="col">WB 10x D0E</th>
+                <th scope="col">WB 1x L/N</th>
+                <th scope="col">WB 1x D0E</th>
+                <th scope="col">RD L/N</th>
+                <th scope="col">RD D0E</th>
+                <th scope="col">Cal 0.07 L/N</th>        
+                <th scope="col">Cal 0.07 D0E</th>
+                <th scope="col">Cal 0.35 L/N</th>
+                <th scope="col">Cal 0.35 D0E</th>
+                <th scope="col">Cal 0.7 L/N</th>
+                <th scope="col">Cal 0.7 D0E</th>
+                <th scope="col">Cal 3.5 L/N</th>
+                <th scope="col">Cal 3.5 D0E</th>
+                <th scope="col">Cal 17.5 L/N</th>
+                <th scope="col">Cal 17.5 D0E</th>
+                <th scope="col">Cal 100 L/N</th>
+                <th scope="col">Cal 100 D0E</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tbodyInput">
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+                  <td><input class="inputfield" type="text"></td>
+              </tr>
+            </tbody>
+          </table>      
+        </div>
+          <input type="submit" name="submit" class="btn btn-info btn-lg largeButton" value="Add New Log">
+      </form>
+      <br />
+      <br />
+    
+    
+    <div class="tableDiv2">
+      <table class="table table-striped w-auto">
+        <!--Table head-->
+          <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Description</th>
+                <th scope="col">Time</th>
+                <th scope="col">Humidity</th>
+                <th scope="col">Initials</th>
+                <th scope="col">Comments</th>
+                <th scope="col">FB L/N</th>
+                <th scope="col">FB D0E</th>
+                <th scope="col">CRD L/N</th>
+                <th scope="col">CRD D0E</th>
+                <th scope="col">tIgE L/N</th>
+                <th scope="col">tIgE D0E</th>
+                <th scope="col">Conjugate L/N</th>
+                <th scope="col">Conjugate D0E</th>
+                <th scope="col">SubA L/N</th>
+                <th scope="col">SubA D0E</th>
+                <th scope="col">SubB L/N</th>
+                <th scope="col">SubB D0E</th>
+                <th scope="col">WB 10x L/N</th>  
+                <th scope="col">WB 10x D0E</th>
+                <th scope="col">WB 1x L/N</th>
+                <th scope="col">WB 1x D0E</th>
+                <th scope="col">RD L/N</th>
+                <th scope="col">RD D0E</th>
+                <th scope="col">Cal 0.07 L/N</th>        
+                <th scope="col">Cal 0.07 D0E</th>
+                <th scope="col">Cal 0.35 L/N</th>
+                <th scope="col">Cal 0.35 D0E</th>
+                <th scope="col">Cal 0.7 L/N</th>
+                <th scope="col">Cal 0.7 D0E</th>
+                <th scope="col">Cal 3.5 L/N</th>
+                <th scope="col">Cal 3.5 D0E</th>
+                <th scope="col">Cal 17.5 L/N</th>
+                <th scope="col">Cal 17.5 D0E</th>
+                <th scope="col">Cal 100 L/N</th>
+                <th scope="col">Cal 100 D0E</th>
+            </tr>
+          </thead>
+          <!--Table body-->
+          <tbody>
+            <tr class="table-info">
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+              <td class="datarows"></td>
+            </tr>
+          </tbody>
+          <!--Table body-->
+        </table>
+      </div>
+    
+    
