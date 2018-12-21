@@ -37,8 +37,8 @@ h1 {
 .tableDiv > .table > .thead-light > tr > th {
 
 }
-.inputfield {
-    margin-left:10%;
+.inputtd {
+    text-align:center;
 }
 
 .logoutbutton {
