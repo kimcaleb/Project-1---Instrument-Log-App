@@ -1,6 +1,7 @@
 const 
     mongoose = require("mongoose"),
     logSchema = new mongoose.Schema({
+        date: {type:String, required:true},
         description: {type:String, required:true},
         time: {type:String, required:true},
         humidity: {type:String, required:true},
