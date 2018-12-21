@@ -30,12 +30,21 @@ Website URL: (https://gentle-beyond-78922.herokuapp.com/)
 
 ---
 
-### Suggested Ways to Get Started
+## Technologies Used
 
-- **Plan with the end in mind.** Know where you want to go by planning with Wireframes & User Stories, so you don't waste time building things you don't need.
-- **Aim for MVP Wednesday** If you define an MVP that you think you can complete by end of day Wednesday, that gives you plenty of extra time before demo day in case it takes longer than you think it will. If you do achieve MVP Wednesday, then you have plenty of time for stretch goals and styling!
-- **Test whatever libraries or gems you want to use.** Most of the time, there is a tutorial that you can follow, but not always, and learning to read documentation is crucial to your success as a developer. **Don't blindly install gems without first understanding how they work!** *If you choose to work with gems that we don't teach in class, it is* **YOUR** *responsibility to read the docs - we may not be able to support you fully if you use a gem that we haven't covered.*
-- **Model your data!** Get your data model (`ActiveRecord`) running first, independent of your implementation of User Stories.
+  - Node.js
+  - Express
+  - Mongodb/mongoose
+  - EJS (Embedded JavaScript) / Express-EJS-Layouts
+  - Bcrypt-nodejs
+  - Passport/Passport-local Authenticaton Strategies
+  - Method-Override
+  - Connect-flash
+  - Morgan
+  - dotenv
+  - Bootstrap
+  - JQuery
+  - HTML5/CSS3
 
 ---
 
