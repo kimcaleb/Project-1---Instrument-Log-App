@@ -1,60 +1,32 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 1: "Full Stack Node App"
+#Project 1: "Hycor Biomedical Instrument Assay Logs"
 
-### Overview
+## Overview
 
-This project is your first foray into building a **full-stack application**. You'll be **building a Node app**, which means you'll learn about what it takes to build a functional application from the ground up yourself.
+A full-stack application for keeping track of test runs on engineering and production prototype units developed at Hycor Biomedical. 
 
-**This is exciting!** It's a lot, but by the end of the week we will have given you the all of the tools needed to build your app.  Here's the best part - you get to decide what you want to build - as long as it meets the technical requirements outlined below.
 
-**You will be working individually for this project.** You'll be designing and coding the app yourself. **Remember to keep things small and focus on mastering the fundamentals – scope/feature creep is the biggest pitfall for any project!**
+Website URL: (https://gentle-beyond-78922.herokuapp.com/)
+---
+
+
+## Snippets of the App
+
+![alt text](https://i.imgur.com/sko2THv.png)
+![alt text](https://i.imgur.com/nkEaZWK.png)
+![alt text](https://i.imgur.com/7aqCuEp.png)
+![alt text](https://i.imgur.com/2cIx47f.png)
+![alt text](https://i.imgur.com/g1xquxu.png)
+![alt text](https://i.imgur.com/vUpTyUh.png)
 
 ---
 
-### Technical Requirements
+## Trello/Postman/WireFrame
 
-Your app must:
-
-- **Have at _least_ 2 models** (more if they make sense) – one representing someone using your application, and at least one more that represents the main functional idea for your app.
-- **Include sign up/log in functionality**, with authentication. Implement basic authorization by restricting access to certain features (i.e. editing or deleting a resource) to an authenticated user.
-- **Have full CRUD** with complete RESTful routes for at least one of your resources (GET, POST, PUT/PATCH, and DELETE)
-- Have **semantically clean HTML and CSS** in your templates/views.
-- Be **deployed online** (Heroku) and accessible to the public.
-
----
-
-### Necessary Deliverables
-
-- A **working full-stack application, built by you**, hosted on Heroku.
-
-- A **git repository for your app, hosted on GitHub** with frequent 
-  commits dating back to the **very beginning** of your project. Commit early, commit often.
-
-- A **link to your hosted working app** in the URL section of your GitHub repo
-
-- A `readme.md` file at the root of the project's git repo with:
-
-    - A screenshot of the finished application ([Taking screenshots on a Mac](https://support.apple.com/en-us/HT201361))
-    - An introduction to the application
-      - What is it?
-      - What problem(s) does it aim to solve?
-    - Explanations of the technologies used.
-    - Installation/startup instructions (this will be a little more complicated than with project 1!). How can a potential employer run your code *locally* on their own machine?
-    - A [wireframe](https://en.wikipedia.org/wiki/Website_wireframe) of the initial idea. You could take a screenshot of a wireframe using [Gliffy](https://www.gliffy.com/), [Balsamiq](https://balsamiq.com/), or even just draw it on a napkin and snap a photo!
-    - An **ERD** (entity relationship diagram) for the data models in your app. The quickest way to get a nice looking ERD is to build one with [Gliffy](https://www.gliffy.com/), take a screenshot of it, and include the screenshot in your readme. But again, a napkin sketch works just as well!
-    - A **Backlog**: Descriptions of any **unsolved problems** or **major hurdles** you had to overcome.
-    - Take advantage of Markdown syntax in your `readme.md` using this [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)!
-    - A link to your **publicly accessible** trello board, described below:
-
-- A **Trello board** with **User Stories**, each moving from left to right in the following lists in your board:
-
-    - *Backlog* (stretch goals)
-    - *To-Do* (what you think you can get done during the week)
-    - *Doing* (what feature(s) you are working on NOW)
-    - *Done* (what features have been tested and merged into the main codebase)
-
-    The lists in your trello board don't have to be named exactly like the ones listed above, but those are a good reference point to start with.
-
-    Prioritize your user stories within the *Backlog* with your "wish list" stories at the bottom.
+![alt text](https://i.imgur.com/KCE4o1D.jpg)
+![alt text](https://i.imgur.com/wrHfPwJ.jpg)
+![alt text](https://i.imgur.com/0T0fyW3.png)
+![alt text](https://i.imgur.com/8fomvf6.png)
+![alt text](https://i.imgur.com/1cT6x4t.png)
 
 ---
 
