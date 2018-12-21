@@ -16,10 +16,9 @@ module.exports = {
             else {
                 device.logs.push(req.body);
                 device.save( err =>{
-                    if (err) res.json({success:false, err});
+                    if (err) console.log(err);
                     else {
-                        res.json({success:true, device});
-                        console.log(device.logs[0]);
+                        res.render("profile2",{device});
                     }
                 });
             }

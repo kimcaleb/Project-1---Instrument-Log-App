@@ -90,6 +90,7 @@
             </thead>
             <tbody>
               <tr class="tbodyInput">
+                  
                 <form method="post" action="/devices/<%= device.id %>">
                   <td><input class="inputfield" type="text" name="date"></td>
                   <td><input class="inputfield" type="text" name="description"></td>
@@ -184,44 +185,46 @@
           </thead>
           <!--Table body-->
           <tbody>
-            <tr class="table-info">
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-              <td class="datarows"></td>
-            </tr>
+            <% for (let i=device.logs.length-1;i>=0; i--) { %>
+                <tr class="table-info">
+                <td class="datarows"> <%= device.logs[i].date %></td>
+                <td class="datarows"> <%= device.logs[i].description %></td>
+                <td class="datarows"> <%= device.logs[i].time %></td>
+                <td class="datarows"> <%= device.logs[i].humidity %></td>
+                <td class="datarows"> <%= device.logs[i].initials %></td>
+                <td class="datarows"> <%= device.logs[i].comments %></td>
+                <td class="datarows"> <%= device.logs[i].fbln %></td>
+                <td class="datarows"> <%= device.logs[i].fbdoe %></td>
+                <td class="datarows"> <%= device.logs[i].crdln %></td>
+                <td class="datarows"> <%= device.logs[i].crddoe %></td>
+                <td class="datarows"> <%= device.logs[i].tigeln %></td>
+                <td class="datarows"> <%= device.logs[i].tigedoe %></td>
+                <td class="datarows"> <%= device.logs[i].conjugateln %></td>
+                <td class="datarows"> <%= device.logs[i].conjugatedoe %></td>
+                <td class="datarows"> <%= device.logs[i].subaln %></td>
+                <td class="datarows"> <%= device.logs[i].subadoe %></td>
+                <td class="datarows"> <%= device.logs[i].subbln %></td>
+                <td class="datarows"> <%= device.logs[i].subbdoe %></td>
+                <td class="datarows"> <%= device.logs[i].wb10xln %></td>
+                <td class="datarows"> <%= device.logs[i].wb10xdoe %></td>
+                <td class="datarows"> <%= device.logs[i].wb1xln %></td>
+                <td class="datarows"> <%= device.logs[i].wb1xdoe %></td>
+                <td class="datarows"> <%= device.logs[i].rdln %></td>
+                <td class="datarows"> <%= device.logs[i].rddoe %></td>
+                <td class="datarows"> <%= device.logs[i].cal007ln %></td>
+                <td class="datarows"> <%= device.logs[i].cal007doe %></td>
+                <td class="datarows"> <%= device.logs[i].cal035ln %></td>
+                <td class="datarows"> <%= device.logs[i].cal035doe %></td>
+                <td class="datarows"> <%= device.logs[i].cal070ln %></td>
+                <td class="datarows"> <%= device.logs[i].cal070doe %></td>
+                <td class="datarows"> <%= device.logs[i].cal35ln %></td>
+                <td class="datarows"> <%= device.logs[i].cal35doe %></td>
+                <td class="datarows"> <%= device.logs[i].cal175ln %></td>
+                <td class="datarows"> <%= device.logs[i].cal175doe %></td>
+                <td class="datarows"> <%= device.logs[i].cal100ln %></td>
+                <td class="datarows"> <%= device.logs[i].cal100doe %></td>
+                </tr>
+            <%  }  %>
           </tbody>
           <!--Table body-->
         </table>
