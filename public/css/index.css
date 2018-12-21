@@ -55,6 +55,23 @@ header {
     text-align: center;
 }
 
-.largeButton {
-    
+.sticky {
+    position:sticky;
+    left:0;
 }
+
+.datarows {
+    border: 2px solid rgb(218, 217, 217);
+    text-align: center;
+}
+
+.tableDiv2 {
+    width:500%;
+ }
+
+th[scope] {
+    border: 2px solid rgb(218, 217, 217);
+    text-align: center;
+}
+
+
