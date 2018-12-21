@@ -29,9 +29,9 @@ h1 {
 
 .tableDiv {
    
-   margin-top: 3%;
+   margin-top: 7%;
    background-color: rgb(211, 224, 230);
-   width:600%;
+   width:491%;
 }
 
 .tableDiv > .table > .thead-light > tr > th {
@@ -72,7 +72,10 @@ header {
 }
 
 .tableDiv2 {
-    width:500%;
+    width:300%;
+ }
+ .table {
+    
  }
 
 th[scope] {
